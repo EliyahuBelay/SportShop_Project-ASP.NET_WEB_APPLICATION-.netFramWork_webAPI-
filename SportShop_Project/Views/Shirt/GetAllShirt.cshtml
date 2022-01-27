@@ -1,0 +1,39 @@
+﻿@using SportShop_Project.Models;
+<link href="~/Content/CSS/Shirt/Shirt.css" rel="stylesheet" type="text/css">
+
+
+<h1 class="headLine_ShoesPage">@ViewBag.Title</h1>
+
+<div>
+    <button class="btn_switchTotable">
+        @Html.ActionLink("Switch to Table", "GetAllShirtTable", "Shirt")
+    </button>
+    <button id="">
+        @Html.ActionLink("Short Shirts", "GetAllShortShirts", "Shirt")
+    </button>
+    <button id="">
+        @Html.ActionLink("Long Shirts", "GetAllLongShirts", "Shirt")
+    </button>
+    <button id="">
+        @Html.ActionLink("Dry Fit Shirts", "GetAllDryFitShirts", "Shirt")
+    </button>
+    <button id="">
+        @Html.ActionLink("Sort By Price", "GetAllSortShirtSortByPrice", "Shirt")
+    </button>
+</div>
+
+
+<div class="container_toAllPage">
+    <section class="card_container">
+        @foreach (Cloth item in Model)
+        {
+            <div class="card">
+                <img class="cardCloth_img" src="@item.ClothPicture" />
+                <h3>@item.ClothBrand</h3>
+                <p>@item.ClothType</p>
+                <p>Price <span class="card_price">@item.ClothPrice $</span></p>
+            </div>
+        }
+    </section>
+</div>
+

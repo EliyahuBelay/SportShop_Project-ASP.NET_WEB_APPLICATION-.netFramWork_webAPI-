@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SportShopDB" Class="SportShopDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-HG30JHU1;Initial Catalog=SportShopDB;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SportShopDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Shoes" Member="Shoes">
+    <Type Name="Shoe">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShoeType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShoeBrand" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShoeModel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShoePrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShoeQuentity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShoeInSale" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ShoePicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SportClubs" Member="SportClubs">
+    <Type Name="SportClub">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClubName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SportClub_SportsEquipment" Member="SportsEquipments" ThisKey="Id" OtherKey="SportClubId" Type="SportsEquipment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cloth" Member="Cloths">
+    <Type Name="Cloth">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClothType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClothGender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClothBrand" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClothModel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClothPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClothQuentity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClothIsShort" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClothIsDryFit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClothPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SportsEquipment" Member="SportsEquipments">
+    <Type Name="SportsEquipment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SportType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EquipmentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EquipmentCompany" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EquipmentPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EquipmentQuentity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SportClubId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SportClub_SportsEquipment" Member="SportClub" ThisKey="SportClubId" OtherKey="Id" Type="SportClub" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

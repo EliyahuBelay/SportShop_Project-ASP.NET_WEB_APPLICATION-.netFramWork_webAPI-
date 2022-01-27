@@ -1,0 +1,14 @@
+﻿body {
+}
+
+
+.navbar_logos{
+    display:flex;
+    justify-content:space-around;
+}
+
+.my_logo{
+    width:6%;
+    height:4%;
+}
+

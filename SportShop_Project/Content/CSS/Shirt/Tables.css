@@ -1,0 +1,46 @@
+﻿body {
+}
+
+
+.tableContainer {
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    width: 100%;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.pic_Table {
+    width: 40px;
+    height: 40px;
+}
+
+
+thead tr .th_Shirt_Table {
+    width: 11%;
+    background-color: #5d4954;
+    color: aliceblue;
+    height: 30px;
+    font-size: x-large;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+tbody .row-table:nth-child(2n+1) {
+    background-color: #f2f2f2;
+}
+
+.row-table:hover {
+}
+
+
+
+
+
+
+
+

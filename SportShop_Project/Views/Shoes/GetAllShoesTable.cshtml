@@ -1,0 +1,45 @@
+﻿@using SportShop_Project.Models;
+<link href="~/Content/CSS/Shoes/Tables.css" rel="stylesheet" type="text/css">
+
+<h1>@ViewBag.TableName</h1>
+
+<button class="">
+    @Html.ActionLink("Back", "GetAllShoes", "Shoes")
+</button>
+
+<div class="tableContainer">
+    <table>
+        <thead>
+            <tr>
+                <th class="th_Shoes_Table" >Type</th>
+                <th class="th_Shoes_Table" >Brand</th>
+                <th class="th_Shoes_Table" >Model</th>
+                <th class="th_Shoes_Table" >Price</th>
+                <th class="th_Shoes_Table" >Sale</th>
+                <th class="th_Shoes_Table" >Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Shoe item in Model)
+            {
+            <tr class="row-table">
+                <td>@item.ShoeType</td>
+                <td>@item.ShoeBrand</td>
+                <td>@item.ShoeModel</td>
+                <td>@item.ShoePrice</td>
+                @if (item.ShoeInSale == true)
+                {
+                    <td>Yes</td>
+                }
+                @if (item.ShoeInSale == false)
+                {
+                    <td>No</td>
+                }
+                <td><img class="pic_Table" src="@item.ShoePicture" /></td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+

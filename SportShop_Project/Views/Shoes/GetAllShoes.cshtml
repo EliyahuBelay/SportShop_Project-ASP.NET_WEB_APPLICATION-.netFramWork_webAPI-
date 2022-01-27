@@ -1,0 +1,66 @@
+﻿@using SportShop_Project.Models;
+<link href="~/Content/CSS/Shoes/Shoes.css" rel="stylesheet" type="text/css">
+
+<h1 class="headLine_ShoesPage">@ViewBag.Title</h1>
+
+<div>
+    <button class="btn_switchTotable">
+        @Html.ActionLink("Switch to Table", "GetAllShoesTable", "Shoes")
+    </button>
+    <button id="">
+        @Html.ActionLink("Shoes on Sale", "GetAllShoesOnSale", "Shoes")
+    </button>
+</div>
+
+<div class="container_toAllPage">
+    <section class="card_container">
+        @foreach (Shoe item in Model)
+        {
+            <div class="card">
+                <img class="card_img" src="@item.ShoePicture" />
+                <h3>@item.ShoeBrand</h3>
+                <p>@item.ShoeType</p>
+                <p>Price <span class="card_price">@item.ShoePrice $</span></p>
+            </div>
+        }
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div id="check">c</div>*@
+@*<div class="hover_pic_moreInfo_container">
+        <section class="container_more_info_pic">
+            <img class="more_info_pic" @item.ShoePicture />
+        </section>
+        <section>
+            <h1>@item.ShoeBrand</h1>
+            <h3>@item.ShoeModel</h3>
+            <p>@item.ShoeQuentity pairs left in our stuck</p>
+            @if (item.ShoeInSale == true)
+            {
+                <p>In Sale!</p>
+            }
+        </section>
+    </div>*@
