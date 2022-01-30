@@ -1,0 +1,42 @@
+﻿
+
+@using SportShop_Project.Models;
+<link href="~/Content/CSS/Equipment/Tables.css" rel="stylesheet" type="text/css">
+
+<div class="head_Line_Equipment_container">
+    <h1 class="head_Line_Equipment">@ViewBag.TableName</h1>
+</div>
+
+<div>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllSportsEquipment","Equipment")'">Back</button>
+</div>
+
+<div class="tableContainer">
+    <table>
+        <thead>
+            <tr>
+                <th class="th_Equipment_Table">Type</th>
+                <th class="th_Equipment_Table">Name</th>
+                <th class="th_Equipment_Table">Company</th>
+                <th class="th_Equipment_Table">Price</th>
+                <th class="th_Equipment_Table">Quentity</th>
+                <th class="th_Equipment_Table">Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (SportEquipment item in Model)
+            {
+                <tr class="row-table">
+                    <td>@item.SportType</td>
+                    <td>@item.EquipmentName</td>
+                    <td>@item.EquipmentCompany</td>
+                    <td>@item.EquipmentPrice</td>
+                    <td>@item.EquipmentQuentity</td>
+                    <td><img class="pic_Table" src="@item.EquipmentPicture" /></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+

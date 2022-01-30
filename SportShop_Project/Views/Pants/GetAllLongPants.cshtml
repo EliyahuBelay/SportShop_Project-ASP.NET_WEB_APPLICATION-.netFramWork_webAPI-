@@ -1,0 +1,26 @@
+﻿
+@using SportShop_Project.Models;
+
+<link href="~/Content/CSS/Pants/Pants.css" rel="stylesheet" type="text/css">
+<div class="headLine_PantsPage_container">
+    <h1 class="headLine_PantsPage">@ViewBag.Title</h1>
+</div>
+
+<div>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllPants","Pants")'">Back</button>
+</div>
+
+<div class="container_toAllPage">
+    <section class="card_container">
+        @foreach (Cloth item in Model)
+        {
+            <div class="card">
+                <img class="cardCloth_img" src="@item.ClothPicture" />
+                <h3>@item.ClothBrand</h3>
+                <p>@item.ClothType</p>
+                <p>Price <span class="card_price">@item.ClothPrice $</span></p>
+            </div>
+        }
+    </section>
+</div>
+

@@ -2,12 +2,12 @@
 @using SportShop_Project.Models;
 <link href="~/Content/CSS/Shirt/Shirt.css" rel="stylesheet" type="text/css">
 
-<h1 class="headLine_ShoesPage">@ViewBag.Title</h1>
+<div class="h1_Shirt_page_container">
+    <h1 class="h1_Shirt_page">@ViewBag.Title</h1>
+</div>
 
 <div>
-    <button id="">
-        @Html.ActionLink("Back", "GetAllShirt", "Shirt")
-    </button>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllShirt","Shirt")'">Back</button>
 </div>
 
 <div class="container_toAllPage">

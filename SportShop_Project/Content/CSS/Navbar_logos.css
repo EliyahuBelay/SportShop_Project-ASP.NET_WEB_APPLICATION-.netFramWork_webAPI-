@@ -8,7 +8,22 @@
 }
 
 .my_logo{
-    width:6%;
-    height:4%;
+    width:7%;
+    height:7%;
+}
+
+/*.my_footer1{*/
+/*    margin-top:3px;*/
+/*}*/
+
+.my_footer {
+    display:flex;
+    flex-direction:column;
+}
+
+.icons_container{
+    display:flex;
+    justify-content:space-around;
+
 }
 

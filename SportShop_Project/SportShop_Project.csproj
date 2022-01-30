@@ -50,12 +50,18 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -134,7 +140,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ClothController.cs" />
+    <Compile Include="Controllers\api\EquipmentController.cs" />
+    <Compile Include="Controllers\api\PantsController.cs" />
+    <Compile Include="Controllers\api\ShirtController.cs" />
+    <Compile Include="Controllers\api\ShoesController.cs" />
+    <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PantsController.cs" />
     <Compile Include="Controllers\ShirtController.cs" />
@@ -154,15 +164,32 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\CSS\Cloth.css" />
+    <Content Include="Content\CSS\Equipment\Equipment.css" />
+    <Content Include="Content\CSS\Equipment\Tables.css" />
+    <Content Include="Content\CSS\Home\Home.css" />
     <Content Include="Content\CSS\Navbar_logos.css" />
+    <Content Include="Content\CSS\Pants\Pants.css" />
+    <Content Include="Content\CSS\Pants\Tables.css" />
     <Content Include="Content\CSS\Shirt\Shirt.css" />
-    <Content Include="Content\CSS\Shirt\ShortShirt.css" />
     <Content Include="Content\CSS\Shirt\Tables.css" />
-    <Content Include="Content\CSS\Shoes.css" />
     <Content Include="Content\CSS\Shoes\Shoes.css" />
     <Content Include="Content\CSS\Shoes\Tables.css" />
-    <Content Include="Content\CSS\Tables.css" />
+    <Content Include="Content\Images\Adidas.png" />
+    <Content Include="Content\Images\asics.png" />
+    <Content Include="Content\Images\canterbury.png" />
+    <Content Include="Content\Images\Converse.png" />
+    <Content Include="Content\Images\equipment.jpg" />
+    <Content Include="Content\Images\Github.png" />
+    <Content Include="Content\Images\Indi.png" />
+    <Content Include="Content\Images\Linkedin.png" />
+    <Content Include="Content\Images\My-logo.png" />
+    <Content Include="Content\Images\Nike.png" />
+    <Content Include="Content\Images\Puma.png" />
+    <Content Include="Content\Images\running.jpg" />
+    <Content Include="Content\Images\shoes.jpg" />
+    <Content Include="Content\Images\Tec-career.jpg" />
+    <Content Include="Content\Images\Umbro.png" />
+    <Content Include="Content\Images\underArmour.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -199,8 +226,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shoes\GetAllShoes.cshtml" />
     <Content Include="Views\Shoes\GetAllShoesTable.cshtml" />
@@ -211,12 +236,20 @@
     <Content Include="Views\Shirt\GetAllLongShirts.cshtml" />
     <Content Include="Views\Shirt\GetAllDryFitShirts.cshtml" />
     <Content Include="Views\Shirt\GetAllSortShirtSortByPrice.cshtml" />
+    <Content Include="Views\Pants\GetAllPants.cshtml" />
+    <Content Include="Views\Pants\GetAllPantsTable.cshtml" />
+    <Content Include="Views\Pants\GetAllLongPants.cshtml" />
+    <Content Include="Views\Pants\GetAllShortPants.cshtml" />
+    <Content Include="Views\Pants\GetAllDryFitPants.cshtml" />
+    <Content Include="Views\Pants\GetAllSortPantsSortByPrice.cshtml" />
+    <Content Include="Views\Equipment\GetAllSportsEquipment.cshtml" />
+    <Content Include="Views\Equipment\GetAllSportsEquipmentTable.cshtml" />
+    <Content Include="Views\Equipment\GetAllSoccerSportsEquipment.cshtml" />
+    <Content Include="Views\Equipment\GetAllBasketballSportsEquipment.cshtml" />
+    <Content Include="Views\Equipment\GetAllSortEquipmentSportSortByPrice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\CSS\Pants\" />
-    <Folder Include="Views\Cloth\" />
-    <Folder Include="Views\Pants\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

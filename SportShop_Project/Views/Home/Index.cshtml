@@ -1,31 +1,55 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<link href="~/Content/CSS/Home/Home.css" rel="stylesheet" type="text/css">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+
+<div class="cont_ainer">
+    <div id="text_about_me" class="cont_info">
+        <h1 class="cont_inside_info">Welcome</h1>
+        <h3 class="cont_inside_info">I'm Eliyahu Belay</h3>
+        <p class="cont_inside_info">
+            I am a student, studying Full-Stuck development.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p class="cont_inside_info">
+            As part of the course I built this site, Hope you will like it.
+        </p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="cont_info">
+        <h1 class="cont_inside_info">About The Website</h1>
+        <p class="cont_inside_info">
+            AllSportStore is part of the Independent Sports Retailers Alliance ( ISRA ) group
+            which is an independent group of like minded local retail sports shops who are always looking to better their shops for the benefit of the local customer.
+            The group has a strong membership with over 40 shops in different locations.
+            Buying as a group and hence more buying power which is to the benefit to you our customers.
+        </p>
     </div>
 </div>
+
+
+<div class="my_boxes">
+    <div class="my_box1">
+        <h2>Sport Equipment</h2>
+        <img class="pic_box" src="~/Content/Images/equipment.jpg" onclick="location.href = '@Url.Action( "GetAllSportsEquipment","Equipment")'" />
+    </div>
+    <div class="my_box1">
+        <h2>Shoes</h2>
+        <img class="pic_box" src="~/Content/Images/shoes.jpg" onclick="location.href = '@Url.Action("GetAllShoes", "Shoes")'" />
+    </div>
+    <div class="my_box1">
+        <h2>Cloths</h2>
+        <img class="pic_box" src="~/Content/Images/running.jpg" onclick="location.href = '@Url.Action("GetAllShirt", "Shirt")'" />
+    </div>
+</div>
+
+<section class="container_company">
+    <img src="~/Content/Images/asics.png" />
+    <img src="~/Content/Images/Adidas.png" />
+    <img src="~/Content/Images/Nike.png" />
+    <img src="~/Content/Images/Puma.png" />
+    <img src="~/Content/Images/Umbro.png" />
+    <img src="~/Content/Images/Converse.png" />
+    <img src="~/Content/Images/canterbury.png" />
+    <img src="~/Content/Images/underArmour.png" />
+</section>

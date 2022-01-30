@@ -1,0 +1,28 @@
+﻿
+@using SportShop_Project.Models;
+<link href="~/Content/CSS/Equipment/Equipment.css" rel="stylesheet" type="text/css">
+
+<div class="head_Line_Equipment_container">
+    <h1 class="head_Line_Equipment">@ViewBag.Title</h1>
+</div>
+
+<div>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllSportsEquipment","Equipment")'">Back</button>
+</div>
+
+
+<div class="container_toAllPage">
+    <section class="card_container">
+        @foreach (SportEquipment item in Model)
+        {
+            <div class="card">
+                <img class="cardCloth_img" src="@item.EquipmentPicture" />
+                <h3>@item.SportType</h3>
+                <p>@item.EquipmentCompany</p>
+                <p>Price <span class="card_price">@item.EquipmentPrice $</span></p>
+            </div>
+        }
+    </section>
+</div>
+
+

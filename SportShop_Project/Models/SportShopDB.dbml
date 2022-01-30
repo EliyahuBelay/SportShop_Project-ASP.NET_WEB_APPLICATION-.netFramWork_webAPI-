@@ -16,7 +16,7 @@
     <Type Name="SportClub">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ClubName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="SportClub_SportsEquipment" Member="SportsEquipments" ThisKey="Id" OtherKey="SportClubId" Type="SportsEquipment" />
+      <Association Name="SportClub_SportEquipment" Member="SportEquipments" ThisKey="Id" OtherKey="SportClubId" Type="SportEquipment" />
     </Type>
   </Table>
   <Table Name="dbo.Cloth" Member="Cloths">
@@ -33,8 +33,8 @@
       <Column Name="ClothPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.SportsEquipment" Member="SportsEquipments">
-    <Type Name="SportsEquipment">
+  <Table Name="dbo.SportEquipment" Member="SportEquipments">
+    <Type Name="SportEquipment">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="SportType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="EquipmentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -42,7 +42,8 @@
       <Column Name="EquipmentPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="EquipmentQuentity" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SportClubId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="SportClub_SportsEquipment" Member="SportClub" ThisKey="SportClubId" OtherKey="Id" Type="SportClub" IsForeignKey="true" />
+      <Column Name="EquipmentPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="SportClub_SportEquipment" Member="SportClub" ThisKey="SportClubId" OtherKey="Id" Type="SportClub" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

@@ -1,0 +1,88 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
+
+
+
+.head_Line_Equipment_container {
+    display: flex;
+    justify-content: center;
+}
+
+.head_Line_Equipment {
+    color: #282c34;
+    width: fit-content;
+    font-family: 'Inconsolata', monospace;
+}
+
+    .head_Line_Equipment:hover {
+        color: #c2d6fd;
+        text-shadow: 0 0 15px #282c34, 0 0 25px #282c34,0 0 35px #282c34,0 0 45px #282c34;
+    }
+
+
+.my_btn {
+    color: #c2d6fd;
+    border-radius: 50px;
+    border-width: 0;
+    font-size: 1.5em;
+    height: 50px;
+    background-color: #282c34;
+    padding: 0 25px;
+    transition: all 200ms;
+    font-family: 'Inconsolata', monospace;
+}
+
+.my_btn:hover {
+    background-color: #afc3eb;
+    transform: scale(1.05);
+    color: #282c34;
+}
+
+.container_toAllPage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.card_container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #282c34;
+}
+
+.card {
+    width: 33%;
+    height: 40%;
+    text-align: center;
+    color: antiquewhite;
+}
+
+
+.cardCloth_img {
+    width: 85%;
+    height: 40vh;
+    border-radius: 5px;
+}
+
+
+.card_price {
+    color: red;
+    font-size: x-large;
+}
+
+.btn_switchTotable {
+    text-decoration: none;
+}
+
+    .btn_switchTotable:hover {
+        color: antiquewhite;
+        background-color: black;
+    }
+
+.btn_wordTable:hover {
+    color: red;
+}

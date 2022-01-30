@@ -1,25 +1,16 @@
 ﻿@using SportShop_Project.Models;
 <link href="~/Content/CSS/Shirt/Shirt.css" rel="stylesheet" type="text/css">
 
-
-<h1 class="headLine_ShoesPage">@ViewBag.Title</h1>
+<div class="h1_Shirt_page_container">
+    <h1 class="h1_Shirt_page">@ViewBag.Title</h1>
+</div>
 
 <div>
-    <button class="btn_switchTotable">
-        @Html.ActionLink("Switch to Table", "GetAllShirtTable", "Shirt")
-    </button>
-    <button id="">
-        @Html.ActionLink("Short Shirts", "GetAllShortShirts", "Shirt")
-    </button>
-    <button id="">
-        @Html.ActionLink("Long Shirts", "GetAllLongShirts", "Shirt")
-    </button>
-    <button id="">
-        @Html.ActionLink("Dry Fit Shirts", "GetAllDryFitShirts", "Shirt")
-    </button>
-    <button id="">
-        @Html.ActionLink("Sort By Price", "GetAllSortShirtSortByPrice", "Shirt")
-    </button>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllShirtTable","Shirt")'">Manager Use</button>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllShortShirts","Shirt")'">Short Shirts</button>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllLongShirts","Shirt")'">Long Shirts</button>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllDryFitShirts","Shirt")'">Dry Fit Shirts</button>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllSortShirtSortByPrice","Shirt")'">Sort By Price</button>
 </div>
 
 

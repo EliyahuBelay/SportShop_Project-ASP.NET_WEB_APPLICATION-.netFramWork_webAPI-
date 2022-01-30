@@ -1,15 +1,13 @@
 ﻿@using SportShop_Project.Models;
 <link href="~/Content/CSS/Shoes/Shoes.css" rel="stylesheet" type="text/css">
 
-<h1 class="headLine_ShoesPage">@ViewBag.Title</h1>
+<div class="headLine_ShoesPage_container">
+    <h1 class="headLine_ShoesPage">@ViewBag.Title</h1>
+</div>
 
 <div>
-    <button class="btn_switchTotable">
-        @Html.ActionLink("Switch to Table", "GetAllShoesTable", "Shoes")
-    </button>
-    <button id="">
-        @Html.ActionLink("Shoes on Sale", "GetAllShoesOnSale", "Shoes")
-    </button>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllShoesOnSale","Shoes")'">Shoes on Sale</button>
+    <button class="my_btn" onclick="location.href = '@Url.Action( "GetAllShoesTable","Shoes")'">Manager Use</button>
 </div>
 
 <div class="container_toAllPage">

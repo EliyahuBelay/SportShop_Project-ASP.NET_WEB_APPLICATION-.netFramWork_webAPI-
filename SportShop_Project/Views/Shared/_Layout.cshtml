@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Spotr Shop</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/CSS/Navbar_logos.css" rel="stylesheet" type="text/css">
@@ -17,29 +17,33 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Shoes", "GetAllShoes", "Shoes")</li>
                     <li>@Html.ActionLink("Shirts", "GetAllShirt", "Shirt")</li>
+                    <li>@Html.ActionLink("Pants", "GetAllPants", "Pants")</li>
+                    <li>@Html.ActionLink("Equipment", "GetAllSportsEquipment", "Equipment")</li>
                 </ul>
             </div>
         </div>
     </div>
-            <div class="navbar_logos">
-                <img class="my_logo" src="https://static.wixstatic.com/media/db36e0_9f977799257f4cdd8353762ce053b6af~mv2.png/v1/fill/w_191,h_80,al_c,q_85,usm_0.66_1.00_0.01/db36e0_9f977799257f4cdd8353762ce053b6af~mv2.webp"/>
-                <p>kkk</p>
-                <img class="my_logo" src="https://cdn.pixabay.com/photo/2016/12/28/10/10/image-1935809_960_720.png"/>
-            </div>
+    <div class="navbar_logos">
+        <a href="https://www.tech-career.org/" target="_blank"><img class="my_logo1" src="~/Content/Images/Tec-career.jpg" /></a>
+        <img class="my_logo" src="~/Content/Images/Indi.png" />
+        <img class="my_logo" src="~/Content/Images/My-logo.png" />
+    </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer class="my_footer">
+            <section class="icons_container">
+                <div class=""><a href="https://www.linkedin.com/mynetwork/" target="_blank"> <img src="~/Content/Images/Linkedin.png" /></a></div>
+                <div class="git-logo"><a href="https://github.com/EliyahuBelay" target="_blank"> <img src="~/Content/Images/Github.png" /></a></div>
+            </section>
+            <p>&copy; @DateTime.Now.Year - The Best Sport Stock For you</p>
         </footer>
     </div>
 

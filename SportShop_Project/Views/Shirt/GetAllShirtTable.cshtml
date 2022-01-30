@@ -1,13 +1,12 @@
 ﻿@using SportShop_Project.Models;
-@*<link href="~/Content/CSS/Cloth.css" rel="stylesheet" type="text/css">*@
 <link href="~/Content/CSS/Shirt/Tables.css" rel="stylesheet" type="text/css">
 
+<div class="h1_Shirt_page_container">
+    <h1 class="h1_Shirt_page">@ViewBag.TableName</h1>
+</div>
 
-<h1>@ViewBag.TableName</h1>
+<button class="my_btn" onclick="location.href = '@Url.Action( "GetAllShirt","Shirt")'">Back</button>
 
-<button class="">
-    @Html.ActionLink("Back", "GetAllShirt", "Shirt")
-</button>
 
 <div class="tableContainer">
     <table>
@@ -27,17 +26,17 @@
         <tbody>
             @foreach (Cloth item in Model)
             {
-            <tr class="row-table">
-                <td>@item.ClothType</td>
-                <td>@item.ClothGender</td>
-                <td>@item.ClothBrand</td>
-                <td>@item.ClothModel</td>
-                <td>@item.ClothPrice</td>
-                <td>@item.ClothQuentity</td>
-                <td>@item.ClothIsShort</td>
-                <td>@item.ClothIsDryFit</td>
-                <td><img class="pic_Table" src="@item.ClothPicture" /></td>
-            </tr>
+                <tr class="row-table">
+                    <td>@item.ClothType</td>
+                    <td>@item.ClothGender</td>
+                    <td>@item.ClothBrand</td>
+                    <td>@item.ClothModel</td>
+                    <td>@item.ClothPrice</td>
+                    <td>@item.ClothQuentity</td>
+                    <td>@item.ClothIsShort</td>
+                    <td>@item.ClothIsDryFit</td>
+                    <td><img class="pic_Table" src="@item.ClothPicture" /></td>
+                </tr>
             }
         </tbody>
 

@@ -1,0 +1,45 @@
+﻿
+@using SportShop_Project.Models;
+<link href="~/Content/CSS/Pants/Tables.css" rel="stylesheet" type="text/css">
+
+<div class="headLine_PantsPage_container">
+    <h1 class="headLine_PantsPage">@ViewBag.TableName</h1>
+</div>
+
+<button class="my_btn" onclick="location.href = '@Url.Action( "GetAllPants","Pants")'">Back</button>
+
+<div class="tableContainer">
+    <table>
+        <thead>
+            <tr>
+                <th class="tH_PantsTable">Type</th>
+                <th class="tH_PantsTable">Gender</th>
+                <th class="tH_PantsTable">Brand</th>
+                <th class="tH_PantsTable">Model</th>
+                <th class="tH_PantsTable">Price</th>
+                <th class="tH_PantsTable">Quentity</th>
+                <th class="tH_PantsTable">Short</th>
+                <th class="tH_PantsTable">Dry Fit</th>
+                <th class="tH_PantsTable">Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Cloth item in Model)
+            {
+                <tr class="row-table">
+                    <td>@item.ClothType</td>
+                    <td>@item.ClothGender</td>
+                    <td>@item.ClothBrand</td>
+                    <td>@item.ClothModel</td>
+                    <td>@item.ClothPrice</td>
+                    <td>@item.ClothQuentity</td>
+                    <td>@item.ClothIsShort</td>
+                    <td>@item.ClothIsDryFit</td>
+                    <td><img class="pic_Table" src="@item.ClothPicture" /></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+

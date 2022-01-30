@@ -1,17 +1,47 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
 
-/*body {
-    margin-top:5px;
-}*/
-.headLine_ShoesPage {
-    text-align: center;
+
+
+.h1_Shirt_page_container {
+    display: flex;
+    justify-content: center;
 }
+
+.h1_Shirt_page {
+    color: #282c34;
+    width: fit-content;
+    font-family: 'Inconsolata', monospace;
+}
+
+    .h1_Shirt_page:hover {
+        color: #c2d6fd;
+        text-shadow: 0 0 15px #282c34, 0 0 25px #282c34,0 0 35px #282c34,0 0 45px #282c34;
+    }
+
+.my_btn {
+    color: #c2d6fd;
+    border-radius: 50px;
+    border-width: 0;
+    font-size: 1.5em;
+    height: 50px;
+    background-color: #282c34;
+    padding: 0 25px;
+    transition: all 200ms;
+    font-family: 'Inconsolata', monospace;
+}
+
+    .my_btn:hover {
+        background-color: #afc3eb;
+        transform: scale(1.05);
+        color: #282c34;
+    }
 
 .container_toAllPage {
     width: 100%;
     display: flex;
     justify-content: center;
-    /*    background-color:red;*/
+    margin-top: 20px;
+    font-family: 'Inconsolata', monospace;
 }
 
 .card_container {
@@ -20,14 +50,11 @@
     flex-wrap: wrap;
     width: 100%;
     background-color: #282c34;
-    /*    border-radius:11px;*/
 }
 
 .card {
     width: 33%;
     height: 40%;
-    /*    border:2px solid black;*/
-    /*    border-radius:5px;*/
     text-align: center;
     color: antiquewhite;
 }
@@ -40,79 +67,11 @@
     border-radius: 5px;
 }
 
-/*.card_img {
-    width: 85%;
-    height: 65%;
-    border-radius: 5px;
-}*/
-
-/*    .card_img:hover + #check {
-        display: block;
-    }*/
-
-/*#check {*/
-/*    color:white;*/
-/*    width: 60vw;*/
-/*width:10px;*/
-/*    height: 600px;*/
-/*height:10px;*/
-/*    z-index: 3;*/
-/*    position:fixed;*/
-/*    background-color: rgb(243, 136, 136);*/
-/*    margin-top: 0%;*/
-/*    margin-left: 20%;*/
-/*    position: fixed;*/
-/*    border-radius: 15px;*/
-/*    display: none;*/
-/*        display:none;*/
-/*    background-color: black;*/
-/*width: 60vw;
-    height: 50vh;*/
-/*    display: none;*/
-/*    z-index: 3;
-    position: fixed;
-    color: aliceblue;
-    margin-top: 20%*/
-/*}*/
 .card_price {
     color: red;
     font-size: x-large;
 }
 
 
-/*.hover_pic_moreInfo_container {
-    background-color: black;
-    width:60vw;
-    height:50vh;
-        display:none;
-    z-index: 3;
-    position: fixed;
-    color: aliceblue;
-    margin-top:
-}*/
 
-/*.container_more_info_pic{
-    display:flex;
-}*/
-
-/*.more_info_pic {
-    width: 100%;
-    height: 100%;
-}*/
-
-.btn_switchTotable {
-    text-decoration: none;
-}
-
-.btn_switchTotable:hover {
-    color:antiquewhite;
-    background-color:black;
-}
-
-.btn_wordTable:hover {
-    color: red;
-}
-
-
-/*///////////////////////////////////////////////////////////////////////////////////////*/
 
